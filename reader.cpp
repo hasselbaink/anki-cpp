@@ -5,12 +5,10 @@ Reader::Reader() {
 	getline(cin, filename);
 	if (filename.length() == 0)
 		filename = "words.txt";
-	init();
 }
 
 Reader::Reader(string filename) {
 	this->filename = filename;
-	init();
 }
 
 string Reader::getFileName() {
@@ -21,7 +19,15 @@ vector<string> Reader::getVector() {
 	return lines;
 }
 
-void Reader::init() {
+void Reader::setFileName(string filename) {
+	this->filename = filename;
+}
+
+void Reader::setVector(vector<string> lines) {
+	this->lines = lines;
+}
+
+void Reader::read() {
 	ifstream in(filename.c_str());
 	if (in.is_open()) {
 		string line;

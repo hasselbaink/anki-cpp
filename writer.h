@@ -1,5 +1,5 @@
-#ifndef READER_H
-#define READER_H
+#ifndef WRITER_H
+#define WRITER_H
 
 #include <iostream>
 #include <string>
@@ -11,22 +11,23 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::vector;
-using std::ifstream;
+using std::ofstream;
 
-class Reader {
+class Writer {
 	private:
 		string		filename;
 		vector<string>	lines;
 	public:
-		Reader				();
-		Reader				(string);
+		Writer				();
+		Writer				(string);
 
-		string 		getFileName	();
-		vector<string> 	getVector	();
+		string		getFileName	();
+		vector<string>	getVector	();
 		void		setFileName	(string);
 		void		setVector	(vector<string>);
 
-		void		read		();
+		void		write		();
+		void		write		(string);
 };
 
 #endif

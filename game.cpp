@@ -114,6 +114,8 @@ void Game::playGame() {
                 this->needFileName = false;
                 delete reader;
         }
+	system("clear");
+	cout << "Write 'q' or 'quit' for exit from game\n" << endl;
         string translate;
 	bool quit = false;
         while (!quit) {
@@ -136,6 +138,7 @@ void Game::playGame() {
 			}
                 }
         }
+	cout << "\nResults was be saved." << endl;
 }
 
 void Game::showCards() {
